@@ -1,0 +1,6 @@
+{
+  "name": "訪問介護サービス変更報告システム",
+  "description": "訪問介護事業所からケアマネージャー様へのサービス変更・新規・追加報告を自動で作成・検索・PDF出力する業務効率化アプリです。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

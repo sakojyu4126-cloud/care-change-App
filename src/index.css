@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans JP", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-udkyokasho: "UD Digi Kyokasho NK-R", "UD Digital Kyokasho Tai NK", "UD デジタル 教科書体 NK", "UD デジタル 教科書体", "Noto Sans JP", sans-serif;
+  --font-meiryoui: "Meiryo UI", "MS UI Gothic", "メイリオ", sans-serif;
+  --font-hgpgothic: "HGPｺﾞｼｯｸM", "HGP Gothic M", "MS PGothic", "MS UI Gothic", "Meiryo UI", "Meiryo", sans-serif;
+}
+
+/* Print Utilities */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 19mm; /* A4用紙の余白を美しく設定 (19mmにすることで配置バランスを最高に保ちます) */
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+  
+  /* Hide UI elements that are not part of the print format */
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  /* Force the printed element to take full page with no margin padding */
+  .print-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Avoid page breaks inside rows */
+  .print-avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
